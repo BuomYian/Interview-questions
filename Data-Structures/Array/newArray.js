@@ -38,8 +38,9 @@ class MyArray {
 const newArray = new MyArray();
 newArray.push("Hi");
 newArray.push("world");
+newArray.push("Merlin");
 
-newArray.pop();
+//newArray.pop();
 newArray.delete(0);
 
 console.log(newArray);
