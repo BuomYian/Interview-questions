@@ -39,4 +39,4 @@ function hasCommonItem3(arr1, arr2) {
   return arr1.some((item) => arr2.includes(item));
 }
 
-console.log(hasCommonItem3(array1, array2)); // O( )
+console.log(hasCommonItem3(array1, array2)); // O(n)
