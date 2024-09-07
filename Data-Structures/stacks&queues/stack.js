@@ -32,7 +32,7 @@ class Stack {
 
   //   Return top element
   peek() {
-    return this.top;
+    return this.top.value;
   } // O(1)
 
   //   Remove item from the top of the stack
