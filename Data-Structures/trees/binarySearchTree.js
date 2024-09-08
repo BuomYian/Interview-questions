@@ -38,7 +38,7 @@ class BinarySearchTree {
       }
     }
     return this;
-  }
+  } // O(log N)
 
   lookup(value) {
     if (!this.root) {
@@ -56,7 +56,7 @@ class BinarySearchTree {
       }
     }
     return null;
-  }
+  } // O(log n)
 
   remove(value) {
     if (!this.root) {
@@ -119,7 +119,7 @@ class BinarySearchTree {
       }
     }
     return null;
-  }
+  } // O (log N)
 
   finMinValue(node) {
     while (node.left !== null) {
