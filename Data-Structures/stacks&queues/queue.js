@@ -12,6 +12,7 @@ class Queue {
     this.length = 0;
   }
 
+  //   Return the first item from the queue without removing it
   peek() {
     if (this.length === 0) {
       return null;
@@ -19,6 +20,7 @@ class Queue {
     return this.first.value;
   }
 
+  //   Add item to the queue
   enqueue(value) {
     let newNode = new Node(value);
 
@@ -34,6 +36,7 @@ class Queue {
     return this;
   }
 
+  //   Remove item from queue
   dequeue() {
     if (this.length === 0) {
       return null;
