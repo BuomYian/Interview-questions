@@ -1,0 +1,24 @@
+// Write two fundtions that finds the factorial
+// of any number. One should use recursive,
+// the other should just use a for loop
+
+function recursiveFactorial(n) {
+  if (n === 0 || n === 1) {
+    return 1;
+  }
+  return n * recursiveFactorial(n - 1);
+}
+
+function iterativeFactorial(n) {
+  let result = 1;
+
+  for (let i = 1; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+} // O(n)
+
+console.log(recursiveFactorial(4));
+console.log(iterativeFactorial(4));
+
+// 4 * 3 * 2 * 1
