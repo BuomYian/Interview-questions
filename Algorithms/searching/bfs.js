@@ -149,6 +149,21 @@ class BinarySearchTree {
     return result;
   }
 
+  //   Time Complexity: O(n)
+  //   Space complexity: O(n)
+
+  depthFirstSearchInorder() {
+    return traverseInorder(this.root, []);
+  }
+
+  depthFirstSearchPreorder() {
+    return traversePreorder(this.root, []);
+  }
+
+  depthFirstSearchPostorder() {
+    return traversePostorder(this.root, []);
+  }
+
   finMinValue(node) {
     while (node.left !== null) {
       node = node.left;
@@ -179,6 +194,51 @@ class BinarySearchTree {
   }
 }
 
+function traverseInorder(node, list) {
+  // If there's a left node, go deeper into the left subtree
+  if (node.left) {
+    traverseInorder(node.left, list);
+  }
+  //   Visit the root node
+  list.push(node.value);
+
+  //   If there is a right node, go deeper into the right subtree
+  if (node.right) {
+    traverseInorder(node.right, list);
+  }
+  return list;
+}
+
+function traversePreorder(node, list) {
+  // Visit the root node first
+  list.push(node.value);
+
+  // If there's a left node, go deeper into the left subtree
+  if (node.left) {
+    traversePreorder(node.left, list);
+  }
+  // If there's a right node, go deeper into the right subtree
+  if (node.right) {
+    traversePreorder(node.right, list);
+  }
+  return list;
+}
+
+function traversePostorder(node, list) {
+  // If there's a left node, go deeper into the left subtree
+  if (node.left) {
+    traversePostorder(node.left, list);
+  }
+
+  //   If there is a right node, go deeper into the right subtree
+  if (node.right) {
+    traversePostorder(node.right, list);
+  }
+  // Visit the root node last
+  list.push(node.value);
+  return list;
+}
+
 function traverse(node) {
   const tree = { value: node.value };
   tree.left = node.left === null ? null : traverse(node.left);
@@ -195,8 +255,12 @@ myBinarytree.insert(6);
 myBinarytree.insert(15);
 myBinarytree.insert(170);
 
-console.log(myBinarytree.breadthFirstSearch());
+// console.log(myBinarytree.breadthFirstSearch());
 // console.log(JSON.stringify(traverse(myBinarytree.root)));
 //       9
 //   4      20
 // 1  6  15   170
+
+console.log("In-order: ", myBinarytree.depthFirstSearchInorder());
+console.log("Pre-order: ", myBinarytree.depthFirstSearchPreorder());
+console.log("Post-order: ", myBinarytree.depthFirstSearchPostorder());
