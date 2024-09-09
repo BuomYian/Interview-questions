@@ -20,7 +20,7 @@ function fibonacciRecursive(n) {
   if (n < 2) return n;
 
   return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
-} // O(n)
+} // O(2^n)
 
 // Using dynamic programming
 function fibonacciDynamic() {
@@ -37,7 +37,7 @@ function fibonacciDynamic() {
       }
     }
   };
-}
+} // O(n)
 
 // console.log(fibonacciIterative(8));
 // console.log(fibonacciRecursive(8));
