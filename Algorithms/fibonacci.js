@@ -16,11 +16,31 @@ function fibonacciIterative(n) {
 } // O(n)
 
 function fibonacciRecursive(n) {
-  // Base case: return 0 if n is 0, return 1 if n is 1
+  // Return 0 if n is 0, return 1 if n is 1
   if (n < 2) return n;
 
   return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
 } // O(n)
 
-console.log(fibonacciIterative(8));
+// Using dynamic programming
+function fibonacciDynamic() {
+  let cache = {};
+  return function fib(n) {
+    if (n in cache) {
+      return cache[n];
+    } else {
+      if (n < 2) {
+        return n;
+      } else {
+        cache[n] = fib(n - 1) + fib(n - 2);
+        return cache[n];
+      }
+    }
+  };
+}
+
+// console.log(fibonacciIterative(8));
 // console.log(fibonacciRecursive(8));
+
+const fib = fibonacciDynamic();
+console.log(fib(6));

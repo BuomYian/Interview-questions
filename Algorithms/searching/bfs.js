@@ -154,15 +154,15 @@ class BinarySearchTree {
 
   depthFirstSearchInorder() {
     return traverseInorder(this.root, []);
-  }
+  } // O(n)
 
   depthFirstSearchPreorder() {
     return traversePreorder(this.root, []);
-  }
+  } // O(n)
 
   depthFirstSearchPostorder() {
     return traversePostorder(this.root, []);
-  }
+  } // O(n)
 
   finMinValue(node) {
     while (node.left !== null) {
