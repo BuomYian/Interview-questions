@@ -1,5 +1,5 @@
 // Write two fundtions that finds the factorial
-// of any number. One should use recursive,
+// of any number. One should use recursion,
 // the other should just use a for loop
 
 function recursiveFactorial(n) {
@@ -22,7 +22,7 @@ function iterativeFactorial(n) {
   return result;
 } // O(n)
 
-console.log(recursiveFactorial(4));
+console.log(recursiveFactorial(6));
 console.log(iterativeFactorial(5));
 
 // 4 * 3 * 2 * 1

@@ -23,4 +23,4 @@ function fibonacciRecursive(n) {
 } // O(n)
 
 console.log(fibonacciIterative(8));
-console.log(fibonacciRecursive(8));
+// console.log(fibonacciRecursive(8));
